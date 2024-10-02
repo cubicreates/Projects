@@ -5,13 +5,14 @@ from kivy.app import App
 from kivy.uix.widget import Widget
 from kivy.clock import Clock
 from kivy.uix.label import Label
+from kivy.lang import Builder
 
 # still screen --> comes up for 3 seconds
 class Still(App):
     def build(self):
         Clock.schedule_once(self.stop, 3)
         return Label(text='Password Manager', font_size = 72)
-    
+Builder.load_file('Password Manager (Version 0).kv')
 class MyLayout(Widget):
     # Global Variables for further use
     global symbol
